@@ -30,6 +30,8 @@ services:
 
   postgres:
     image: postgres:16.2
+    ports:
+      - "5433:5432" # Avoid conflict with host PostgreSQL
     restart: unless-stopped
     networks:
     - default
